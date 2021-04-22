@@ -1,8 +1,8 @@
 muclasses : prelab13.o libuniversity.a
-	compile prelab13.o -luniversity -L. -o muclasses
+	gcc -std=c11 -g -Wall -Werror prelab13.o -luniversity -L. -o muclasses
 
 prelab13.o : prelab13.c university.h
-	compile -c prelab13.c
+	gcc -std=c11 -g -Wall -Werror -c prelab13.c
 
 clean:
 	@rm -f *.o
